@@ -11,7 +11,7 @@
     <title>喝口水</title>
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./icon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css?v=3" />
+    <link rel="stylesheet" href="./styles.css?v=4" />
   </head>
   <body>
     <div class="app-shell">
@@ -26,12 +26,6 @@
           </span>
         </a>
         <div class="topbar-actions">
-          <button class="icon-button" id="exportData" type="button" title="导出记录" aria-label="导出记录">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 3v12m0 0 4-4m-4 4-4-4" />
-              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
-            </svg>
-          </button>
           <button class="icon-button" id="resetDay" type="button" title="清空今日" aria-label="清空今日">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M3 6h18" />
@@ -164,7 +158,7 @@
         <section class="panel reward-panel" aria-labelledby="rewardTitle">
           <div class="reward-copy">
             <p class="eyebrow">周日奖励</p>
-            <h2 id="rewardTitle">本周喝够水，周日就喝一杯奶茶</h2>
+            <h2 id="rewardTitle">本周喝够水，周日就喝一杯奶茶 <span aria-hidden="true">🧋</span></h2>
             <p id="rewardStatus">本周还没有开始记录</p>
           </div>
           <div class="reward-meter" aria-label="本周奶茶奖励进度">
@@ -199,6 +193,6 @@
       </li>
     </template>
 
-    <script src="./app.js?v=3" type="module"></script>
+    <script src="./app.js?v=4" type="module"></script>
   </body>
 </html>
