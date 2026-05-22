@@ -1,0 +1,17 @@
+{
+  "name": "喝口水",
+  "short_name": "喝口水",
+  "description": "轻量饮水提醒与记录工具",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f7f2",
+  "theme_color": "#0f766e",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
