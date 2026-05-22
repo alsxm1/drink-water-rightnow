@@ -5,7 +5,7 @@ const ASSETS = [
   "./styles.css?v=3",
   "./app.js?v=3",
   "./manifest.webmanifest",
-  "./assets/icon.svg",
+  "./icon.svg",
 ];
 
 self.addEventListener("install", (event) => {
