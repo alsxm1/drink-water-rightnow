@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="喝口水图标">
+  <rect width="128" height="128" rx="24" fill="#0f766e"/>
+  <path d="M64 18c16 20 30 40 30 61 0 18-13 32-30 32S34 97 34 79c0-21 14-41 30-61Z" fill="#d7fff6"/>
+  <path d="M45 79c0 11 8 20 19 20 6 0 11-2 15-7-27 1-32-17-26-39-5 9-8 18-8 26Z" fill="#38bdf8"/>
+  <path d="M75 35c7 10 12 20 12 31" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".85"/>
+</svg>
