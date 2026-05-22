@@ -40,7 +40,6 @@ const els = {
   entryCount: document.querySelector("#entryCount"),
   weeklyChart: document.querySelector("#weeklyChart"),
   chartGoal: document.querySelector("#chartGoal"),
-  exportData: document.querySelector("#exportData"),
   resetDay: document.querySelector("#resetDay"),
   toast: document.querySelector("#toast"),
   waterCanvas: document.querySelector("#waterCanvas"),
@@ -226,7 +225,7 @@ function notifyHydration() {
   if ("Notification" in window && Notification.permission === "granted") {
     new Notification("喝口水", {
       body: "现在补一点水，今天的进度会更轻松。",
-      icon: "./assets/icon.svg",
+      icon: "./icon.svg",
     });
   }
 }
@@ -481,22 +480,6 @@ function showToast(message) {
   }, 2400);
 }
 
-function exportData() {
-  const payload = {
-    app: "喝口水",
-    exportedAt: new Date().toISOString(),
-    ...state,
-  };
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = `喝口水记录-${todayKey()}.json`;
-  link.click();
-  URL.revokeObjectURL(url);
-  showToast("记录已导出");
-}
-
 function bindEvents() {
   quickAmounts.forEach((amount) => {
     const button = document.createElement("button");
@@ -517,7 +500,6 @@ function bindEvents() {
   els.resetDay.addEventListener("click", resetToday);
   els.saveSettings.addEventListener("click", updateSettingsFromForm);
   els.reminderToggle.addEventListener("change", toggleReminders);
-  els.exportData.addEventListener("click", exportData);
   window.addEventListener("resize", () => drawWater(totalForDate(todayKey()) / state.settings.goal));
   document.addEventListener("visibilitychange", () => {
     if (!document.hidden) checkReminder();
