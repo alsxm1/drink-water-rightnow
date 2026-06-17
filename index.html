@@ -10,15 +10,17 @@
     />
     <title>喝口水</title>
     <link rel="manifest" href="./manifest.webmanifest" />
-    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css?v=4" />
+    <link rel="icon" href="./icon.svg?v=7" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=7" />
   </head>
   <body>
     <div class="app-shell">
       <header class="topbar" aria-label="应用顶部栏">
         <a class="brand" href="#" aria-label="喝口水首页">
           <span class="brand-mark" aria-hidden="true">
-            <span class="brand-drop"></span>
+            <svg class="brand-drop" viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M27.5 7.7C36.1 17.6 42 27 34.8 36.2c-6.4 8.2-19.7 7-25.5-1.2C2.7 25.7 9.9 16.4 27.5 7.7Z" />
+            </svg>
           </span>
           <span>
             <strong>喝口水</strong>
@@ -38,6 +40,21 @@
       </header>
 
       <main class="workspace">
+        <section class="stats-grid" aria-label="饮水统计">
+          <article class="stat-card">
+            <span>连续达标 <span aria-hidden="true">★</span></span>
+            <strong id="streakDays">0 天</strong>
+          </article>
+          <article class="stat-card">
+            <span>7 日平均</span>
+            <strong id="weeklyAverage">0 ml</strong>
+          </article>
+          <article class="stat-card">
+            <span>今日次数</span>
+            <strong id="entryCount">0 次</strong>
+          </article>
+        </section>
+
         <section class="hero-panel" aria-labelledby="todayTitle">
           <div class="hero-copy">
             <p class="eyebrow" id="todayDate"></p>
@@ -140,21 +157,6 @@
           </div>
         </section>
 
-        <section class="stats-grid" aria-label="饮水统计">
-          <article class="stat-card">
-            <span>连续达标</span>
-            <strong id="streakDays">0 天</strong>
-          </article>
-          <article class="stat-card">
-            <span>7 日平均</span>
-            <strong id="weeklyAverage">0 ml</strong>
-          </article>
-          <article class="stat-card">
-            <span>今日次数</span>
-            <strong id="entryCount">0 次</strong>
-          </article>
-        </section>
-
         <section class="panel reward-panel" aria-labelledby="rewardTitle">
           <div class="reward-copy">
             <p class="eyebrow">周日奖励</p>
@@ -193,6 +195,6 @@
       </li>
     </template>
 
-    <script src="./app.js?v=4" defer></script>
+    <script src="./app.js?v=7" defer></script>
   </body>
 </html>

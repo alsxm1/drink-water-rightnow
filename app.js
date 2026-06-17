@@ -225,7 +225,7 @@ function notifyHydration() {
   if ("Notification" in window && Notification.permission === "granted") {
     new Notification("喝口水", {
       body: "现在补一点水，今天的进度会更轻松。",
-      icon: "./icon.svg",
+      icon: "./icon.svg?v=7",
     });
   }
 }
@@ -459,11 +459,6 @@ function drawWater(progress) {
     ctx.globalAlpha = 1;
 
     ctx.restore();
-
-    ctx.beginPath();
-    ctx.arc(84, 66, 24, 0, Math.PI * 2);
-    ctx.fillStyle = progress >= 1 ? "#f7c948" : "#9ee6d8";
-    ctx.fill();
 
     animationFrame = window.requestAnimationFrame(renderFrame);
   };

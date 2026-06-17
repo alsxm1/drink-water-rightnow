@@ -1,11 +1,11 @@
-const CACHE_NAME = "he-kou-shui-v3";
+const CACHE_NAME = "he-kou-shui-v8";
 const ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=3",
-  "./app.js?v=3",
+  "./styles.css?v=7",
+  "./app.js?v=7",
   "./manifest.webmanifest",
-  "./icon.svg",
+  "./icon.svg?v=7",
 ];
 
 self.addEventListener("install", (event) => {
